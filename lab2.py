@@ -9,14 +9,15 @@ from math import factorial
 '''Det här är lab2, med pascals triangel och '''
 
 def pascals_triangel(n):
-    for i in range(0, 4):
+    for i in range(0, n):
+        rad = ''
         for j in range(0, i+1):
-            number = binom(i,j)
-            print(number)
-        print ('''\n''')
+            number = str(binom(i,j))
+            rad += number + ' '
+        print (rad + '''\n''')
 
 def binom(i, j):
-    number = factorial(i)/(factorial(j) * (factorial(i-j)))
+    number = int(factorial(i)/(factorial(j) * (factorial(i-j))))
     return number
       
 def start():
@@ -24,7 +25,7 @@ def start():
           eller nån annan skit''')
     user_choice = input('Tryck P för Pascals triangel eller S för skit: ')
     if user_choice == 'P':
-        n = input('Hur många rader av Pascals triangel vill du skriva ut? ')
+        n = int(input('Hur många rader av Pascals triangel vill du skriva ut? '))
         pascals_triangel(n)
         
 start()
