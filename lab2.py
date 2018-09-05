@@ -39,7 +39,7 @@ def pascals_triangel(n):
         for j in range(0, i+1):
             number = str(binom(i,j))
             rad += number + ' '
-        print (rad + '''\n''')
+        print (rad)
         sleep(1)
 
 def binom(i, j):
